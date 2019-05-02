@@ -24,6 +24,7 @@ body{
 	z-index: 5;
 	position: fixed;
 	background: url("assets/bg-estrellas.png");
+	background-size: cover;
 }
 .cohete{
 	box-sizing: border-box;
@@ -33,58 +34,74 @@ body{
 	z-index: 10;
 	position: fixed;
 	background: url("assets/bg-cohete.png");
+	background-size: cover;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 .contenedor{
 	width: 90vw;
-	height: 80vh;
+	height: 90vh;
 	margin: auto;
 	z-index: 20;
 	position: fixed;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-start;
+	justify-content: center;
+}
+.vacio{
+	margin: auto;
+}
+.cuerpo{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
 .logo{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: auto;
-	margin-bottom: 1rem;
-	margin-top: 1rem;
+	margin-top: 0;
 }
 .logo > img{
-	width: 80%;
+	width: 8vw;
 	height: auto;
 }
 .texto{
-	margin-top: 10rem;
-	margin-right: auto;
+	margin: auto;
+	margin-left: 0;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	align-self: center;
 }
 .texto > p{
-	margin: 1rem;
-	font-size: 1.5rem;
+	margin: auto;
+	margin-left: 0;
+	margin-bottom: 2vh;
+	font-size: 1.2vw;
 	font-weight: 400;
+
 }
 .texto > h1{
-	margin: 1rem;
-	font-size: 6rem;
+	margin: auto;
+	margin-left: 0;
+	margin-bottom: 2vh;
+	font-size: 5.2vw;
 	font-weight: 600;
+	margin-right: auto;
 }
 .boton{
 	background: white;
 	text-decoration: none;
 	color: black;
-	padding: .5rem 3rem;
-	margin-right: auto;
-	margin-left: 1rem;
-	margin-top: 1rem;
-	border-radius: 2rem;
-	font-size: 1.5rem;
+	padding: .5vw 4vh;
+	margin: auto;
+	margin-left: 0;
+	border-radius: 3vh;
+	font-size: 1.5vw;
 	font-weight: 700;
 	-webkit-box-shadow: 0px 12px 15px 2px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 12px 15px 2px rgba(0,0,0,0.75);
@@ -93,25 +110,56 @@ body{
 .boton:hover{
 	background: #F8601B;
 }
-
+#desktop{
+		display: block;
+	}
+	#mobile{
+		display: none;
+	}
 @media screen and (max-width: 800px) {
-	.texto > p{
-		margin: 1rem;
-		font-size: 1rem;
-	}
-	.texto > h1{
-		margin: 1rem;
-		font-size: 1.5rem;
-		font-weight: 900;
-	}
-	.boton{
-		font-size: 1rem;
+	.contenedor{
+		align-items: center;
+		justify-content: center;
 	}
 	.fondo{
-		height: 100%;
+		background: url("assets/03-Background Estrellas_Mobile.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		back
+		height: 100vh;
 	}
 	.cohete{
-		height: 50%;
+		background: url("assets/02-Background Cohete_Mobile.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+	}
+	.logo > img {
+		width: 30vw;
+	}
+	.contenedor{
+		
+	}
+	.cuerpo{
+		width: 100%;
+	}
+	.texto > h1{
+		font-size: 7vw;
+	}
+	.texto > p{
+		font-size: 2.8vw;
+	}
+	.boton {
+		font-size: 4vw;
+		padding: 1vw 6vh;
+	}
+	#desktop{
+		display: none;
+	}
+	#mobile{
+		display: block;
 	}
 
 }
